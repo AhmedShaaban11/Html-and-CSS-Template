@@ -1,6 +1,6 @@
 /* Framework */
 :root {
-  --main-color: #1B9CFC;
+  --main-color: #1b9cfc;
   --nav-height: 60px;
   --search-width: 90%;
   --search-height: calc(var(--nav-height) - 20px);
@@ -8,7 +8,7 @@
 }
 
 body {
-  font: 1em "Baloo Da 2", sans-serif;
+  font-family: "Baloo Da 2", sans-serif;
 }
 
 .container {
@@ -40,38 +40,38 @@ nav ul {
 
 /* Header Styles */
 header nav {
-  background-color: #ffffff;
   height: var(--nav-height);
+  background-color: #ffffff;
   box-shadow: 0 0 10px #dddddd;
 }
 
 header nav .flex-wrapper {
   display: flex;
+  height: var(--nav-height);
   justify-content: space-between;
   align-items: center;
-  height: var(--nav-height);
 }
 
 header nav .flex-wrapper .logo {
-  color: var(--main-color);
-  font: 1.3em "Damion", cursive;
   width: 15%;
   margin-right: 10px;
   text-align: center;
+  color: var(--main-color);
 }
 
 header nav .flex-wrapper .logo h1 {
   height: 100%;
   margin: 0;
+  font: bold 43px "Damion", sans-serif;
 }
 
 header nav .flex-wrapper .nav-links {
-  color: var(--main-color);
-  font-size: 1.1em;
-  text-transform: capitalize;
   display: flex;
   width: 60%;
   height: 100%;
+  font-size: 18px;
+  color: var(--main-color);
+  text-transform: capitalize;
 }
 
 header nav .flex-wrapper .nav-links li {
@@ -82,11 +82,11 @@ header nav .flex-wrapper .nav-links li {
 
 header nav .flex-wrapper .nav-links li a {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
-  transition: all .1s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  transition: all .1s linear;
 }
 
 header nav .flex-wrapper .nav-links li a:hover {
@@ -105,15 +105,16 @@ header nav .flex-wrapper .search-form .search-box {
 }
 
 header nav .flex-wrapper .search-form .search-box .search {
-  color: var(--main-color);
-  background-color: #ffffff;
   width: var(--search-width);
   height: var(--search-height);
   padding-left: calc(var(--send-search-width) + 10px);
   border: 1px solid var(--main-color);
-  border-radius: 15px;
   outline: 0;
-  transition: all .1s ease-in-out;
+  border-radius: 15px;
+  font-size: 18px;
+  color: var(--main-color);
+  background-color: #ffffff;
+  transition: all .1s linear;
 }
 
 header nav .flex-wrapper .search-form .search-box .search:focus {
@@ -126,17 +127,18 @@ header nav .flex-wrapper .search-form .search-box .search:focus::placeholder {
 }
 
 header nav .flex-wrapper .search-form .search-box .send-search {
-  cursor: pointer;
-  color: #ffffff;
-  background-color: var(--main-color);
   position: absolute;
   top: 0;
   left: calc(50% - (var(--search-width) / 2));
   width: var(--send-search-width);
   height: var(--search-height);
   border: 1px solid var(--main-color);
-  border-radius: 15px 0 0 15px;
   outline: 0;
+  border-radius: 15px 0 0 15px;
+  font-size: 19px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: var(--main-color);
 }
 
 /* page intro */
@@ -150,13 +152,13 @@ header .page-intro .content {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   color: var(--main-color);
+  text-align: center;
 }
 
 header .page-intro .content .title {
-  font: bold 28px "Baloo Da 2";
   margin: 0;
+  font: bold 28px "Baloo Da 2";
 }
 
 header .page-intro .content p {
@@ -171,18 +173,19 @@ header .page-intro .content .content-buttons {
   border: 2px solid var(--main-color);
   outline: 0;
   border-radius: 5px;
+  font-size: 18px;
   cursor: pointer;
-  transition-duration: .2s;
+  transition: all .1s linear;
 }
 
 header .page-intro .content .works-button {
+  margin-right: 10px;
   color: #ffffff;
   background-color: var(--main-color);
-  margin-right: 10px;
 }
 
 header .page-intro .content .works-button:hover {
-  background-color: #0080E6;
+  background-color: #0080e6;
 }
 
 header .page-intro .content .learn-button {
@@ -191,7 +194,7 @@ header .page-intro .content .learn-button {
 }
 
 header .page-intro .content .learn-button:hover {
-  background-color: #ededed;
+  background-color: #f2f2f2;
 }
 
 /* Main content */
@@ -215,6 +218,7 @@ main .features .grid-wrapper .feature {
   width: 100%;
   height: 100%;
   padding: 25px 15px;
+  border: 1px solid #1095ff;
 }
 
 main .features .grid-wrapper .feature .feature-icon {
@@ -223,8 +227,8 @@ main .features .grid-wrapper .feature .feature-icon {
   height: 100%;
   float: left;
   overflow: hidden;
-  text-align: center;
   color: #ffffff;
+  text-align: center;
 }
 
 main .features .grid-wrapper .feature .feature-icon i {
