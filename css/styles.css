@@ -2,8 +2,9 @@
 :root {
   --main-color: #1B9CFC;
   --nav-height: 60px;
-  --search-width: 85%;
-  --search-height: calc(var(--nav-height) - 20px)
+  --search-width: 90%;
+  --search-height: calc(var(--nav-height) - 20px);
+  --send-search-width: 45px;
 }
 
 body {
@@ -50,6 +51,8 @@ header nav .flex-wrapper .logo {
   color: var(--main-color);
   font: 1.3em "Damion", cursive;
   width: 15%;
+  margin-right: 10px;
+  text-align: center;
 }
 
 header nav .flex-wrapper .logo h1 {
@@ -88,12 +91,12 @@ header nav .flex-wrapper .nav-links li a:hover {
 
 header nav .flex-wrapper .search-form {
   width: 25%;
-  text-align: right;
 }
 
 header nav .flex-wrapper .search-form .search-box {
   position: relative;
   width: 100%;
+  text-align: center;
 }
 
 header nav .flex-wrapper .search-form .search-box .search {
@@ -101,7 +104,7 @@ header nav .flex-wrapper .search-form .search-box .search {
   background-color: #ffffff;
   width: var(--search-width);
   height: var(--search-height);
-  padding-left: calc(100% - var(--search-width) + 10px);
+  padding-left: calc(var(--send-search-width) + 10px);
   border: 1px solid var(--main-color);
   border-radius: 15px;
   outline: 0;
@@ -123,8 +126,8 @@ header nav .flex-wrapper .search-form .search-box .send-search {
   background-color: var(--main-color);
   position: absolute;
   top: 0;
-  left: calc(100% - var(--search-width));
-  width: 45px;
+  left: calc(50% - (var(--search-width) / 2));
+  width: var(--send-search-width);
   height: var(--search-height);
   border: 1px solid var(--main-color);
   border-radius: 15px 0 0 15px;
