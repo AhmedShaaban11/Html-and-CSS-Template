@@ -21,6 +21,11 @@ body {
   background-color: var(--main-color);
 }
 
+.lead {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
 nav a {
   color: inherit;
   text-decoration: none;
@@ -33,7 +38,6 @@ nav ul {
 }
 
 /* Header Styles */
-
 header nav {
   background-color: #ffffff;
   height: var(--nav-height);
@@ -122,7 +126,7 @@ header nav .flex-wrapper .search-form .search-box .search:focus::placeholder {
 
 header nav .flex-wrapper .search-form .search-box .send-search {
   cursor: pointer;
-  color: #fff;
+  color: #ffffff;
   background-color: var(--main-color);
   position: absolute;
   top: 0;
@@ -132,4 +136,60 @@ header nav .flex-wrapper .search-form .search-box .send-search {
   border: 1px solid var(--main-color);
   border-radius: 15px 0 0 15px;
   outline: 0;
+}
+
+/* page intro */
+header .page-intro {
+  position: relative;
+  height: 350px;
+}
+
+header .page-intro .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--main-color);
+}
+
+
+header .page-intro .content .title {
+  font: bold 28px "Baloo Da 2";
+  margin: 0;
+}
+
+header .page-intro .content p {
+  padding: 5px 0 15px;
+  margin: 0;
+}
+
+header .page-intro .content .content-buttons {
+  width: 190px;
+  height: 50px;
+  padding: 15px;
+  border: 2px solid var(--main-color);
+  outline: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: .2s;
+}
+
+header .page-intro .content .works-button {
+  color: #ffffff;
+  background-color: var(--main-color);
+  margin-right: 10px;
+}
+
+header .page-intro .content .works-button:hover {
+  background-color: #0080E6;
+}
+
+header .page-intro .content .learn-button {
+  color: var(--main-color);
+  background-color: #ffffff;
+}
+
+header .page-intro .content .learn-button:hover {
+  background-color: #ededed;
 }
