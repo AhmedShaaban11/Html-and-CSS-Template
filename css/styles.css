@@ -24,6 +24,7 @@ body {
 .lead {
   font-size: 16px;
   line-height: 1.7;
+  color: #666666;
 }
 
 nav a {
@@ -192,3 +193,49 @@ header .page-intro .content .learn-button {
 header .page-intro .content .learn-button:hover {
   background-color: #ededed;
 }
+
+/* Main content */
+main * {
+  box-sizing: border-box;
+}
+
+/* features */
+main .features {
+  background-color: var(--main-color);
+}
+
+main .features .grid-wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 100px);
+}
+
+main .features .grid-wrapper .feature {
+  width: 100%;
+  height: 100%;
+  padding: 25px 15px;
+}
+
+main .features .grid-wrapper .feature .feature-icon {
+  position: relative;
+  width: 80px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff;
+}
+
+main .features .grid-wrapper .feature .feature-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+}
+
+main .features .grid-wrapper .feature p {
+  margin: 0;
+  color: #ffffff;
+} 
