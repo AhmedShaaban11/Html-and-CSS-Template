@@ -26,3 +26,6 @@
 4 - Focus on it changes the color and the background of it [!Done]  
 5 - If the searchbar has a value then the changes of focus event should be active ever  
 6 - In the small media searchbar replace with search icon when click on it searchbar appear below the nav
+
+## Liscense
+Images: Animal photo created by jcomp - www.freepik.com
