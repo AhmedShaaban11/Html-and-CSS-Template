@@ -240,7 +240,7 @@ main * {
 
 /* About-us section */
 main .about-us {
-  padding: 40px 0;
+  padding: 60px 0;
   background-color: #f7f7f7;
 }
 
@@ -295,7 +295,7 @@ main .about-us .content .img img {
 
 /* Features section */
 main .features {
-  padding: 40px 0;
+  padding: 60px 0;
   background-color: #ffffff;
 }
 
@@ -342,13 +342,74 @@ main .features .feature .feature-title::after {
 
 /* Portfolio section */
 main .portfolio {
-  padding: 40px 0;
+  padding: 60px 0;
   background-color: #f7f7f7;
 }
 
 main .portfolio .title {
   color: var(--main-color);
   text-align: center;
+}
+
+main .portfolio .grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 100px);
+  grid-gap: 5px;
+}
+
+main .portfolio .projects {
+  padding: 35px 0;
+}
+
+main .portfolio .projects .project-img {
+  margin: 0;
+}
+
+main .portfolio .projects .project-img-1 {
+  grid-column: 1 / 5;
+  grid-row: 1 / 3;
+}
+
+main .portfolio .projects .project-img-2 {
+  grid-column: 5 / 9;
+  grid-row: 1 / 5;
+}
+
+main .portfolio .projects .project-img-3 {
+  grid-column: 1 / 3;
+  grid-row: 3 / 5;
+}
+
+main .portfolio .projects .project-img-4 {
+  grid-column: 3 / 5;
+  grid-row: 3 / 5;
+}
+
+main .portfolio .projects .project-img-5 {
+  grid-column: 1 / 4;
+  grid-row: 5 / 7;
+}
+
+main .portfolio .projects .project-img-6 {
+  grid-column: 4 / 9;
+  grid-row: 5 / 7;
+}
+
+main .portfolio .projects .project-img-7 {
+  grid-column: 1 / 5;
+  grid-row: 7 / 9;
+}
+
+main .portfolio .projects .project-img-8 {
+  grid-column: 5 / 9;
+  grid-row: 7 / 9;
+}
+
+main .portfolio .projects .project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* animals section */
