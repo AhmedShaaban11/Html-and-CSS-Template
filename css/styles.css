@@ -441,9 +441,38 @@ main .gallery .content .screenshots .screenshot-title {
   transition: .4s;
 }
 
-
 main .gallery .content .screenshots:hover .screenshot-title {
   display: block;
+}
+
+/* Progress section */
+.progress {
+  padding: 60px 0;
+  background: url(../images/08.jpg) no-repeat;
+  background-size: cover;
+}
+
+.progress .grid-wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 25%);
+  justify-items: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.progress .progress-counter .counter {
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.progress .progress-counter .counter-title {
+  padding-top: 10px;
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
 }
 
 /* animals section */
