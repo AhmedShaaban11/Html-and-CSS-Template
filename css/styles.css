@@ -16,11 +16,6 @@
   --send-search-width: 45px;
 }
 
-/* ::selection {
-  color: #ffffff;
-  background-color: #ffffff;
-} */
-
 body {
   font-family: "Baloo Da 2", sans-serif;
 }
@@ -34,8 +29,18 @@ body {
 .title {
   margin: 0;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 35px;
   letter-spacing: 2px;
+}
+
+.gradient-title {
+  color: transparent;
+  background-image: linear-gradient(to right, var(--main-color), #0fd952, #6ff426, #00ff00);
+  background-clip: text;
+}
+
+.subtitle {
+  margin: 0;
 }
 
 .lead {
@@ -303,7 +308,6 @@ main .features {
 }
 
 main .features .title {
-  color: var(--main-color);
   text-align: center;
 }
 
@@ -350,7 +354,7 @@ main .gallery {
 }
 
 main .gallery .title {
-  color: var(--main-color);
+  /* color: var(--main-color); */
   text-align: center;
 }
 
@@ -447,13 +451,13 @@ main .gallery .content .screenshots:hover .screenshot-title {
 }
 
 /* Progress section */
-.progress {
+main .progress {
   padding: 60px 0;
   background: url(../images/08.jpg) no-repeat;
   background-size: cover;
 }
 
-.progress .grid-wrapper {
+main .progress .grid-wrapper {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(4, 25%);
@@ -463,13 +467,13 @@ main .gallery .content .screenshots:hover .screenshot-title {
   text-align: center;
 }
 
-.progress .progress-counter .counter {
+main .progress .progress-counter .counter {
   font-weight: bold;
   font-size: 22px;
   letter-spacing: 1px;
 }
 
-.progress .progress-counter .counter-title {
+main .progress .progress-counter .counter-title {
   padding-top: 10px;
   margin: 0;
   font-size: 26px;
@@ -477,13 +481,13 @@ main .gallery .content .screenshots:hover .screenshot-title {
 }
 
 /* Testimonials section */
-.testimonials {
+main .testimonials {
   padding: 60px 0;
   background-color: #ffffff;
   overflow: hidden;
 }
 
-.testimonials > .grid-wrapper {
+main .testimonials > .grid-wrapper {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 100vw);
@@ -491,186 +495,114 @@ main .gallery .content .screenshots:hover .screenshot-title {
   align-items: center;
 }
 
-.testimonials .testimonial {
+main .testimonials .testimonial {
   width: 600px;
   margin: auto;
   text-align: center;
 }
 
-.testimonials .testimonial .grid-wrapper {
+main .testimonials .testimonial .grid-wrapper {
   display: grid;
   grid-template-rows: repeat(4, auto);
   align-items: center;
   grid-gap: 10px;
 }
 
-.testimonials .testimonial .person-img img {
-  width: 100px;
-  height: 100px;
+main .testimonials .testimonial .person-img img {
+  width: 80px;
+  height: 80px;
   border: 2px solid var(--main-color);
   border-radius: 50%;
   object-fit: cover;
 }
 
-.testimonials .testimonial .rank {
+main .testimonials .testimonial .rank {
   cursor: default;
 }
 
-.testimonials .testimonial .rank a {
+main .testimonials .testimonial .rank a {
+  font-size: 14px;
   color: #ffcf2f;
   text-decoration: none;
 }
 
-.testimonials .testimonial .person-name {
+main .testimonials .testimonial .person-name {
   margin: 0;
   font-size: 22px;
   letter-spacing: 1px;
 }
 
-.testimonials .testimonial p {
+main .testimonials .testimonial p {
   margin: 0;
 }
 
-.testimonials .swipers {
+main .testimonials .swipers {
   padding-left: 10px;
-  margin: auto;
+  margin: 20px auto 0;
+  cursor: default;
   text-align: center;
 }
 
-.testimonials .swipers .swiper {
+main .testimonials .swipers .swiper {
   height: 7px;
   width: 35px;
   border: 0;
   outline: 0;
-  background: #ddd;
+  cursor: pointer;
+  background: #dddddd;
 }
 
-.testimonials .swipers .swiper.active {
+main .testimonials .swipers .swiper.active {
   background-color: var(--main-color);
 }
 
-/* animals section */
-/*
-main .animals {
-  padding: 40px 0;
-  background-color: #ffffff;
-}
-
-main .animals .title {
-  margin: 0;
-  font-size: 29px;
-  color: #ffffff;
-  text-align: center;
-}
-
-main .animals article {
-  padding: 20px 0;
-  text-align: center;
-}
-
-main .animals article p {
-  margin: 0;
-}
-
-main .animals .grid-wrapper {
-  display: grid;
-  width: 100%;
-  padding: 30px 15px;
-  grid-template-columns: repeat(4, 24%);
-  grid-gap: 10px 1%;
-}
-
-main .animals .grid-wrapper .species {
-  width: 100%;
-  height: 100%;
-  padding: 10px 10px 15px;
-  border: 1px solid #e1e1e1;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #ffffff;
-  text-align: center;
-  box-shadow: 0 1px 3px #dddddd;
-  transition: all 100ms linear;
-}
-
-main .animals .grid-wrapper .species:hover {
-  box-shadow: 0 1px 5px #bbbbbb;
-}
-
-main .animals .grid-wrapper .species .species-icon {
-  padding: 5px 0 10px;
-  font-size: 35px;
-  color: #ffffff;
-}
-
-main .animals .grid-wrapper .species .species-name {
-  padding: 0 0 5px;
-  margin: 0;
-  font-weight: bold;
-  font-size: 17px;
-  color: #434343;
-}
-
-main .animals .grid-wrapp .species p {
-  margin: 0;
-}
-
 /* Founders section */
-/*main .founders {
-  padding: 20px 0;
-  background-color: #ffffff;
+main .founders {
+  padding: 60px 0;
+  background-color: #f7f7f7;
 }
 
-main .founders .title {
-  margin: 0;
+main .founders .container > .title {
+  padding-bottom: 60px;
   text-align: center;
 }
 
-main .founders .grid-wrapper {
+main .founders .content.grid-wrapper {
   display: grid;
-  margin: 0 0 40px;
-  grid-gap: 10px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(4, 25%);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 5px;
 }
 
-main .founders .founder {
-  position: relative;
-  padding: 45px 15px 15px;
-  border: 1px solid #ffffff;
+main .founders .content .founder {
+  height: 300px;
+  padding: 0 5px;
+}
+
+main .founders .content .founder img {
+  width: 100%;
+  height: 80%;
+  border: 2px solid var(--main-color);
   border-radius: 10px;
-  margin: 10px 0;
-  text-align: center;
+  object-fit: cover;
 }
 
-main .founders .founder .founder-img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
+main .founders .content .founder .title {
+  font-size: 20px;
+  color: #101010;
 }
 
-main .founders .founder .founder-img img {
-  width: 70px;
-  height: 70px;
-  border: 2px solid #ffffff;
-  border-radius: 50%;
+main .founders .content .founder .subtitle {
+  padding: 5px 0 10px;
+  font-size: 18px;
+  color: #333333;
 }
 
-main .founders .founder .founder-name {
-  margin: 0;
-  font-size: 21px;
-  color: #121212;
+main .founders .content .founder .phone i {
+  color: var(--main-color);
 }
 
-main .founders .founder .founder-job {
-  padding: 10px 0 15px;
-  margin: 0;
-  font-size: 12px;
-  letter-spacing: 1px;
+main .founders .content .founder .phone .phone-number {
   color: #666666;
 }
-
-main .founders .founder p {
-  margin: 0;
-}
-*/
