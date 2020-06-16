@@ -54,7 +54,7 @@ nav a {
   text-decoration: none;
 }
 
-nav ul {
+.unstyled-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -567,42 +567,87 @@ main .founders .container > .title {
   text-align: center;
 }
 
-main .founders .content.grid-wrapper {
+main .founders .grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 350px;
   justify-items: center;
   align-items: center;
-  grid-gap: 5px;
+  grid-gap: 15px;
 }
 
-main .founders .content .founder {
-  height: 300px;
-  padding: 0 5px;
-}
-
-main .founders .content .founder img {
+main .founders .founder {
+  position: relative;
   width: 100%;
-  height: 80%;
-  border: 2px solid var(--main-color);
-  border-radius: 10px;
+  height: 100%;
+  border: 1px solid var(--main-color);
+}
+
+main .founders .founder .founder-image {
+  width: 100%;
+  height: 100%;
+  transition: all .2s linear;
+}
+
+main .founders .founder:hover .founder-image {
+  opacity: .6;
+}
+
+main .founders .founder .founder-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-main .founders .content .founder .title {
-  font-size: 20px;
-  color: #101010;
+main .founders .founder .founder-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  padding: 10px 15px;
+  opacity: 0;
+  background-color: #ffffff;
+  text-align: center;
+  transition: all .2s linear;
 }
 
-main .founders .content .founder .subtitle {
-  padding: 5px 0 10px;
-  font-size: 18px;
-  color: #333333;
+main .founders .founder:hover .founder-info {
+  opacity: 1;
 }
 
-main .founders .content .founder .phone i {
-  color: var(--main-color);
+main .founders .founder .founder-info .founder-name {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eeeeee;
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 2px;
 }
 
-main .founders .content .founder .phone .phone-number {
+main .founders .founder .founder-info .founder-job {
+  padding: 5px 0;
+  border-bottom: 1px solid #eeeeee;
+  margin: 0;
+  font-size: 14px;
   color: #666666;
+}
+
+main .founders .founder .founder-info .founder-media {
+  padding-top: 10px;
+  cursor: default;
+}
+
+main .founders .founder .founder-info .founder-media .links {
+  display: inline-block;
+  transition: all .1s linear;
+}
+
+main .founders .founder .founder-info .founder-media .links:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+main .founders .founder .founder-info .founder-media .links a {
+  font-size: 16px;
+  color: var(--main-color);
+  text-decoration: none;
 }
