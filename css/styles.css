@@ -1,11 +1,12 @@
 /* Framework */
 
 /* color: #090029 blue */
+/* color: #021e4d blue */
+/* color: #3b328b purple */
 /* color: #040011 black */
 /* color: #17b373 green */
 /* color: #6eb32a green */
 /* color: #ffa502 orange */
-/* --main-color: #39b89e green */
 /* --gallery-overlay-color: rgba(23, 67, 100, .8) */
 
 :root {
@@ -749,4 +750,140 @@ main .tickets .ticket .purchase button {
   letter-spacing: 2px;
   cursor: pointer;
   background-color: #f93f83;
+}
+
+/* Blog section */
+main .blog {
+  padding: 60px 0;
+  background-color: #f7f7f7;
+}
+
+main .blog .title {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+main .blog .grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 15px;
+}
+
+main .blog .post {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #e5e5e5;
+}
+
+main .blog .post .post-image {
+  width: 100%;
+  height: 200px;
+}
+
+main .blog .post .post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main .blog .post .post-body {
+  padding: 20px 15px 30px;
+  background-color: #ffffff;
+}
+
+main .blog .post .post-body .post-title {
+  margin: 0;
+}
+
+main .blog .post .post-body p {
+  padding: 15px 0;
+  margin: 0;
+}
+
+main .blog .post .post-body .link {
+  color: #38b99c;
+  text-decoration: none;
+}
+
+main .blog .post .post-body .link i {
+  position: relative;
+  top: 2px;
+  padding-left: 5px;
+}
+
+main .blog .post:hover .post-body .link i {
+  padding-left: 9px;
+}
+
+/* Contact-Us section */
+main .contact-us {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+main .contact-us .title {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+main .contact-us .contact-form .grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 50px);
+  grid-gap: 15px;
+}
+
+main .contact-us .contact-form .inputs {
+  padding: 10px;
+  border: 2px solid #dcdcdc;
+  outline: 0;
+  background-color: #eeeeee;
+}
+
+main .contact-us .contact-form .inputs:focus {
+  border-color: var(--main-color);
+}
+
+main .contact-us .contact-form .name-input {
+  grid-column: 1 / 3;
+}
+
+
+main .contact-us .contact-form .country-input {
+  grid-column: 1 / 3;
+}
+
+main .contact-us .contact-form .email-input {
+  grid-column: 1 / 3;
+}
+
+main .contact-us .contact-form .message-input {
+  grid-column: 3 / 5;
+  grid-row: 1 / 4;
+  resize: none;
+}
+
+main .contact-us .contact-form .send-button {
+  grid-column: 1 / 5;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: var(--main-color);
+  transition: all .1s linear;
+}
+
+main .contact-us .contact-form .send-button:hover,
+main .contact-us .contact-form .send-button:active {
+  background-color: #39a19e;
+}
+
+main .contact-us .contact-form .send-button:focus {
+  outline: 2px solid #39519e;
 }
