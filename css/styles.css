@@ -887,3 +887,17 @@ main .contact-us .contact-form .send-button:active {
 main .contact-us .contact-form .send-button:focus {
   outline: 2px solid #39519e;
 }
+
+/* Footer styles */
+footer {
+  padding: 20px 0;
+  color: #ffffff;
+  background-color: var(--main-color);
+  text-align: center;
+}
+
+footer .credits {
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
