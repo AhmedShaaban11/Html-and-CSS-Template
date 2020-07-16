@@ -4,45 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Template 3</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Damion&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <!-- Header content -->
-  <header>
+  <header id="header">
     <nav>
       <div class="container">
         <div class="flex-wrapper">
-          <div class="logo">
-            <a href="index.html"><img src="images/logo.svg" alt=""></a>
+          <div class="menu-icon">
+            <i class="fa fa-smile-beam"></i>
           </div>
-          <ul class="nav-links unstyled-list">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Contact</a></li>
+          <div class="logo">
+            <h1 class="title">Zotemo</h1>
+          </div>
+          <ul class="nav-links list-unstyled">
+            <li class="link active"><a href="#header">Home</a></li>
+            <li class="link"><a href="#about-us">About</a></li>
+            <li class="link"><a href="#gallery">Gallery</a></li>
+            <li class="link"><a href="#tickets">Tickets</a></li>
+            <li class="link"><a href="#contact-us">Contact</a></li>
           </ul>
-          <form class="search-form">
-            <div class="search-box">
-              <input type="search" class="search" name="searcher-content" placeholder="e.g. ex">
-              <input type="submit" class="send-search fa" value="&#xf002;">
-            </div>
-          </form>
+          <div class="nav-button">
+            <a href="#tickets">Buy Ticket</a>
+          </div>
         </div>
       </div>
     </nav>
     <section class="page-intro">
-      <div class="overlay"></div>
-      <div class="container flex-wrapper">
+      <div class="container">
         <div class="content">
-          <h2 class="title">Welcome in Zotemo!</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button type="button" class="works-button content-buttons">Our works</button>
-          <button type="button" class="learn-button content-buttons">Learn now</button>
+          <h2 class="title">A New Animal Every Day</h2>
+          <p class="lead">Place for any animal of any species</p>
+          <a href="#tickets" class="buy-button">Buy Ticket</a>
         </div>
       </div>
     </section>
@@ -50,72 +49,75 @@
 
   <!-- Main content -->
   <main>
-    <section class="about-us">
+    <!-- About-us section -->
+    <section class="about-us" id="about-us">
       <div class="container">
-        <div class="content flex-wrapper">
+        <div class="content grid-wrapper">
           <div class="info">
             <h2 class="title"><span>About Us</span></h2>
             <h3 class="subtitle">We protect, raise and love animals</h3>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean pharetra magna ac placerat vestibulum. Quis commodo odio aenean sed adipiscing diam donec adipiscing.</p>
           </div>
-          <div class="img">
+          <div class="image">
             <img src="images/02.jpg" alt="">
           </div>
         </div>
       </div>
     </section>
-    <section class="features">
+    <!-- Features section -->
+    <section class="features" id="features">
       <div class="container">
-        <h2 class="title gradient-title">Features</h2>
+        <h2 class="title">Features</h2>
         <div class="grid-wrapper">
           <div class="feature">
             <div class="feature-icon">
               <i class="fa fa-home" style="color: #1e90ff;"></i>
             </div>
             <h3 class="feature-title">Wide Place</h3>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minus distinctio dolor ullam id repellendus</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit Quisquam</p>
           </div>
           <div class="feature">
             <div class="feature-icon">
               <i class="fa fa-tree" style="color: #199b2f;"></i>
             </div>
             <h3 class="feature-title">Natural Environment</h3>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minus distinctio dolor ullam id repellendus</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit Quisquam</p>
           </div>
           <div class="feature">
             <div class="feature-icon">
               <i class="fa fa-carrot" style="color: #ffa500;"></i>
             </div>
             <h3 class="feature-title">Perfect Food</h3>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minus distinctio dolor ullam id repellendus</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit Quisquam</p>
           </div>
           <div class="feature">
             <div class="feature-icon">
               <i class="fa fa-smile-beam" style="color: #9acd32;"></i>
             </div>
             <h3 class="feature-title">Gently Treating</h3>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minus distinctio dolor ullam id repellendus</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit Quisquam</p>
           </div>
           <div class="feature">
             <div class="feature-icon">
               <i class="fa fa-heart" style="color: #ff0000;"></i>
             </div>
             <h3 class="feature-title">Health Care</h3>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minus distinctio dolor ullam id repellendus</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit Quisquam</p>
           </div>
           <div class="feature">
             <div class="feature-icon">
               <i class="fa fa-paw" style="color: #a0522d;"></i>
             </div>
             <h3 class="feature-title">Animal Training</h3>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minus distinctio dolor ullam id repellendus</p>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit Quisquam</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="gallery">
-      <div class="container">
-        <h2 class="title gradient-title">Gallery</h2>
+    <!-- Gallery section -->
+    <section class="gallery" id="gallery">
+      <div class="container-fluid">
+        <h2 class="title">Gallery</h2>
         <div class="content grid-wrapper">
           <figure class="screenshots screenshot-1">
             <div class="overlay"></div>
@@ -139,127 +141,118 @@
           </figure>
           <figure class="screenshots screenshot-5">
             <div class="overlay"></div>
-            <img src="images/07.jpg" alt="Lions">
-            <figcaption class="screenshot-title">Lions</figcaption>
+            <img src="images/07.jpg" alt="Sharks">
+            <figcaption class="screenshot-title">Sharks</figcaption>
           </figure>
           <figure class="screenshots screenshot-6">
             <div class="overlay"></div>
-            <img src="images/08.jpg" alt="Sharks">
-            <figcaption class="screenshot-title">Sharks</figcaption>
+            <img src="images/08.jpg" alt="Elephants">
+            <figcaption class="screenshot-title">Elephants</figcaption>
           </figure>
           <figure class="screenshots screenshot-7">
             <div class="overlay"></div>
-            <img src="images/09.jpg" alt="Elephants">
-            <figcaption class="screenshot-title">Elephants</figcaption>
-          </figure>
-          <figure class="screenshots screenshot-8">
-            <div class="overlay"></div>
-            <img src="images/10.jpg" alt="Tigers">
+            <img src="images/09.jpg" alt="Tigers">
             <figcaption class="screenshot-title">Tigers</figcaption>
           </figure>
         </div>
       </div>
     </section>
-    <section class="progress">
+    <!-- Progress section -->
+    <section class="progress" id="progress">
       <div class="container">
         <div class="grid-wrapper">
           <div class="progress-counter">
-            <div class="counter">37</div>
+            <h4 class="counter">37</h4>
             <h3 class="counter-title">Country</h3>
           </div>
           <div class="progress-counter">
-            <div class="counter">1378</div>
+            <h4 class="counter">1378</h4>
             <h3 class="counter-title">Volunteer</h3>
           </div>
           <div class="progress-counter">
-            <div class="counter">738159</div>
+            <h4 class="counter">738159</h4>
             <h3 class="counter-title">Visitor</h3>
           </div>
           <div class="progress-counter">
-            <div class="counter">37936</div>
+            <h4 class="counter">37936</h4>
             <h3 class="counter-title">Animal</h3>
           </div>
         </div>
       </div>
     </section>
-    <section class="testimonials">
-      <div class="grid-wrapper">
-        <div class="testimonial">
-          <div class="container">
-            <div class="grid-wrapper">
-              <div class="person-img">
-                <img src="images/11.jpg" alt="">
+    <!-- Testimonials section -->
+    <section class="testimonials" id="testimonials">
+      <div class="container-fluid">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial">
+                <div class="person-img">
+                  <img src="images/11.jpg" alt="">
+                </div>
+                <h3 class="person-name">John Doe</h3>
+                <div class="rank">
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </div>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Felis donec et odio pellentesque diam Feugiat pretium nibh ipsum consequat nisl</p>
               </div>
-              <h3 class="person-name">John Doe</h3>
-              <div class="rank">
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial">
+                <div class="person-img">
+                  <img src="images/12.jpg" alt="">
+                </div>
+                <h3 class="person-name">John Doe</h3>
+                <div class="rank">
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </div>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Felis donec et odio pellentesque diam Feugiat pretium nibh ipsum consequat nisl</p>
               </div>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Felis donec et odio pellentesque diam Feugiat pretium nibh ipsum consequat nisl</p>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial">
+                <div class="person-img">
+                  <img src="images/13.jpg" alt="">
+                </div>
+                <h3 class="person-name">John Doe</h3>
+                <div class="rank">
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </div>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Felis donec et odio pellentesque diam Feugiat pretium nibh ipsum consequat nisl</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="testimonial">
-          <div class="container">
-            <div class="grid-wrapper">
-              <div class="person-img">
-                <img src="images/12.jpg" alt="">
-              </div>
-              <h3 class="person-name">John Doe</h3>
-              <div class="rank">
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-              </div>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Felis donec et odio pellentesque diam Feugiat pretium nibh ipsum consequat nisl</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="container">
-            <div class="grid-wrapper">
-              <div class="person-img">
-                <img src="images/13.jpg" alt="">
-              </div>
-              <h3 class="person-name">John Doe</h3>
-              <div class="rank">
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-                <a href="#"><i class="fa fa-star"></i></a>
-              </div>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Felis donec et odio pellentesque diam Feugiat pretium nibh ipsum consequat nisl</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div></div>
-      <div class="swipers">
-        <div class="container">
-          <button type="button" class="swiper active" data-number="1"></button>
-          <button type="button" class="swiper" data-number="2"></button>
-          <button type="button" class="swiper" data-number="3"></button>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev swiper-button"></div>
+          <div class="swiper-button-next swiper-button"></div>
         </div>
       </div>
     </section>
-    <section class="founders">
+    <!-- Founders section -->
+    <section class="founders" id="founders">
       <div class="container">
-        <h2 class="title gradient-title">Founders</h2>
-        <div class="grid-wrapper">
+        <h2 class="title">Founders</h2>
+        <div class="grid-wrapper responsive-grid">
           <div class="founder">
             <div class="founder-image">
               <img src="images/14.jpg" alt="">
             </div>
             <div class="founder-info">
-              <h3 class="founder-name gradient-title">John Doe</h3>
+              <h3 class="founder-name">John Doe</span></h3>
               <h4 class="founder-job">Web Developer</h4>
-              <ul class="founder-media unstyled-list">
+              <ul class="founder-media list-unstyled">
                 <li class="links"><a href="#"><i class="fab fa-facebook-f facebook"></i></a></li>
                 <li class="links"><a href="#"><i class="fab fa-twitter twitter"></i></a></li>
                 <li class="links"><a href="#"><i class="fab fa-instagram instagram"></i></a></li>
@@ -271,23 +264,23 @@
               <img src="images/15.jpg" alt="">
             </div>
             <div class="founder-info">
-              <h3 class="founder-name gradient-title">John Doe</h3>
+              <h3 class="founder-name">John Doe</span></h3>
               <h4 class="founder-job">Web Developer</h4>
-              <ul class="founder-media unstyled-list">
+              <ul class="founder-media list-unstyled">
                 <li class="links"><a href="#"><i class="fab fa-facebook-f facebook"></i></a></li>
                 <li class="links"><a href="#"><i class="fab fa-twitter twitter"></i></a></li>
                 <li class="links"><a href="#"><i class="fab fa-instagram instagram"></i></a></li>
               </ul>
             </div>
           </div>
-          <div class="founder">
+          <div class="founder fluid-item">
             <div class="founder-image">
               <img src="images/16.jpg" alt="">
             </div>
             <div class="founder-info">
-              <h3 class="founder-name gradient-title">John Doe</h3>
+              <h3 class="founder-name">John Doe</span></h3>
               <h4 class="founder-job">Web Developer</h4>
-              <ul class="founder-media unstyled-list">
+              <ul class="founder-media list-unstyled">
                 <li class="links"><a href="#"><i class="fab fa-facebook-f facebook"></i></a></li>
                 <li class="links"><a href="#"><i class="fab fa-twitter twitter"></i></a></li>
                 <li class="links"><a href="#"><i class="fab fa-instagram instagram"></i></a></li>
@@ -297,56 +290,73 @@
         </div>
       </div>
     </section>
-    <section class="tickets">
+    <!-- Tickets section -->
+    <section class="tickets" id="tickets">
       <div class="container">
-        <div class="grid-wrapper">
-          <div class="ticket normal">
+        <h2 class="title">Tickets</h2>
+        <div class="grid-wrapper responsive-grid">
+          <div class="ticket">
             <div class="type">
-              <h3 class="title gradient-title">Normal Ticket</h3>
               <h3 class="price">10$</h3>
+              <h3 class="title">Normal</span></h3>
             </div>
             <div class="access">
-              <h4 class="access-title">Access</h4>
-              <ul class="access-list unstyled-list">
-                <li>Ground<i class="fa fa-check"></i></li>
-                <li>Shops<i class="fa fa-check"></i></li>
-                <li>Houses<i class="fa fa-false"></i></li>
+              <ul class="access-list list-unstyled">
+                <li>Ground<i class="fa fa-check" style="color: #01d55d;"></i></li>
+                <li>Shops<i class="fa fa-times" style="color: #ff0000;"></i></li>
+                <li>Houses<i class="fa fa-times" style="color: #ff0000;"></i></li>
               </ul>
             </div>
             <div class="purchase">
-              <button type="button">Get It!</button>
+              <a href="#" class="buy-button">Buy Now!</a>
             </div>
           </div>
-          <div class="ticket vip">
+          <div class="ticket">
             <div class="type">
-              <h3 class="title gradient-title">VIP Ticket</h3>
               <h3 class="price">15$</h3>
+              <h3 class="title">VIP</span></h3>
             </div>
             <div class="access">
-              <h4 class="access-title">Access</h4>
-              <ul class="access-list unstyled-list">
-                <li>Ground<i class="fa fa-check"></span></i></li>
-                <li>Shops<i class="fa fa-check"></i></li>
-                <li>Houses<i class="fa fa-check"></i></li>
+              <ul class="access-list list-unstyled">
+                <li>Ground<i class="fa fa-check" style="color: #01d55d;"></span></i></li>
+                <li>Shops<i class="fa fa-check" style="color: #01d55d;"></i></li>
+                <li>Houses<i class="fa fa-times" style="color: #ff0000;"></i></li>
               </ul>
             </div>
             <div class="purchase">
-              <button type="button">Get It!</button>
+              <a href="#" class="buy-button">Buy Now!</a>
+            </div>
+          </div>
+          <div class="ticket fluid-item">
+            <div class="type">
+              <h3 class="price">20$</h3>
+              <h3 class="title">MVP</span></h3>
+            </div>
+            <div class="access">
+              <ul class="access-list list-unstyled">
+                <li>Ground<i class="fa fa-check" style="color: #01d55d;"></span></i></li>
+                <li>Shops<i class="fa fa-check" style="color: #01d55d;"></i></li>
+                <li>Houses<i class="fa fa-check" style="color: #01d55d;"></i></li>
+              </ul>
+            </div>
+            <div class="purchase">
+              <a href="#" class="buy-button">Buy Now!</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="blog">
+    <!-- Blog section -->
+    <section class="blog" id="blog">
       <div class="container">
-        <h2 class="title gradient-title">Latest Blog Posts</h2>
-        <div class="grid-wrapper">
+        <h2 class="title">Latest Blog Posts</h2>
+        <div class="grid-wrapper responsive-grid">
           <div class="post">
             <div class="post-image">
               <img src="images/05.jpg" alt="">
             </div>
             <div class="post-body">
-              <h3 class="post-title"><span class="gradient-title">New Parrots</span></h3>
+              <h3 class="post-title">New Parrots</span></h3>
               <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio animi et nisi pariatur aspernatur ea dignissimos! Neque beatae deserunt ea aut quaerat tempore nesciunt, sunt dignissimos voluptates autem odit blanditiis!</p>
               <a href="#" class="link">Read More<i class="fa fa-angle-double-right"></i></a>
             </div>
@@ -356,17 +366,17 @@
               <img src="images/06.jpg" alt="">
             </div>
             <div class="post-body">
-              <h3 class="post-title"><span class="gradient-title">Lemurs Cage</span></h3>
+              <h3 class="post-title">Lemurs Cage</span></h3>
               <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio animi et nisi pariatur aspernatur ea dignissimos! Neque beatae deserunt ea aut quaerat tempore nesciunt, sunt dignissimos voluptates autem odit blanditiis!</p>
               <a href="#" class="link">Read More<i class="fa fa-angle-double-right"></i></a>
             </div>
           </div>
-          <div class="post">
+          <div class="post fluid-item">
             <div class="post-image">
-              <img src="images/07.jpg" alt="">
+              <img src="images/17.jpg" alt="">
             </div>
             <div class="post-body">
-              <h3 class="post-title"><span class="gradient-title">Lions House</span></h3>
+              <h3 class="post-title">Lions House</span></h3>
               <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio animi et nisi pariatur aspernatur ea dignissimos! Neque beatae deserunt ea aut quaerat tempore nesciunt, sunt dignissimos voluptates autem odit blanditiis!</p>
               <a href="#" class="link">Read More<i class="fa fa-angle-double-right"></i></a>
             </div>
@@ -374,9 +384,10 @@
         </div>
       </div>
     </section>
-    <section class="contact-us">
+    <!-- Contact-us section -->
+    <section class="contact-us" id="contact-us">
       <div class="container">
-        <h2 class="title gradient-title">Contact Us</h2>
+        <h2 class="title">Contact Us</h2>
         <form action="" class="contact-form">
           <div class="grid-wrapper">
             <input type="text" name="name" class="inputs name-input" placeholder="Name">
@@ -391,10 +402,21 @@
   </main>
   <footer>
     <div class="container">
-      <h5 class="credits">Zotemo&copy;2020</h5>
+      <div class="flex-wrapper">
+        <div class="copyright">
+          <p>Zotemo&copy;2020</p>
+        </div>
+        <div class="media">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
     </div>
   </footer>
 
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
