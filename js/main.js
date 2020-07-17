@@ -26,7 +26,23 @@ window.onload = () => {
     });
   };
 
+  // Toggle menu in small screens
+  const menu = document.getElementById("nav-links"),
+    toggleElements = document.getElementById("toggle-menu-elements"),
+    toggler = document.getElementById("toggler");
   
+  toggler.onclick = function () {
+    if (menu.style.display === "") {
+      menu.style.display = "none";
+    }
+    if (menu.style.display === "none") {
+      menu.style.display = "block";
+      this.classList.add("arrow");
+    } else {
+      menu.style.display = "none";
+      this.classList.remove("arrow");
+    }
+  };
 
   // Active on Nav links
   const navLinks = document.querySelectorAll(".nav-links .link");

@@ -157,6 +157,22 @@ header nav .flex-wrapper {
   align-items: center;
 }
 
+header nav .toggle-menu {
+  position: relative;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+header nav .toggle-menu .icon.arrow::after {
+  position: absolute;
+  content: "";
+  bottom: -27px;
+  left: -6px;
+  border: 15px solid transparent;
+  border-bottom-color: #ffffff;
+}
+
 header nav .logo {
   font-family: "Patrick Hand", cursive;
   color: var(--main-color);
@@ -192,7 +208,11 @@ header nav .nav-button a {
 }
 
 @media (max-width: 991px) {
+  header nav .toggle-menu {
+    
+  }
   header nav .nav-links {
+    display: none;
     position: absolute;
     top: var(--nav-height);
     left: 0;
@@ -214,17 +234,23 @@ header nav .nav-button a {
     height: 100%;
     padding: 15px;
   }
+  header nav .nav-button {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) {
   header nav .flex-wrapper {
     
   }
+  header nav .toggle-menu {
+    display: none;
+  }
   header nav .logo {
     
   }
   header nav .nav-links {
-    display: flex;
+    display: flex !important;
     height: 100%;
   }
   header nav .nav-links .link {
@@ -246,7 +272,7 @@ header nav .nav-button a {
     justify-content: center;
     align-items: center;
   }
-  header nav .nav-button a {
+  header nav .nav-button {
     
   }
 }
