@@ -2,64 +2,81 @@ window.onload = () => {
 
   "use strict";
 
-  // Functions
-  const show = (variable) => variable.style.animation = "show 1s ease-out forwards";
-  
-  const fadeIn = (variable) => variable.style.animation = "fade-in 1s linear forwards";
+  // Classes
+  class ActiveLinks {
+    constructor (elements) {
+      this.elements = elements;
+    }
+    active() {
+      this.elements.forEach((elem) => {
+        elem.onclick = () => {
+          this.elements.forEach((e) => {
+            e.classList.remove("active");
+          });
+          elem.classList.add("active");
+        };
+      });
+    }
+  }
 
-  const arrFadeIn = (variable) => {
-    let i = 0;
-    variable.forEach((elem) => {
-      elem.style.animation = `fade-in ${i}ms linear forwards`;
-      i += 150;
-    });
-  };
-
-  const linksActive = (arr) => {
-    arr.forEach((elem) => {
-      elem.onclick = () => {
-        arr.forEach((e) => {
-          e.classList.remove("active");
-        });
-        elem.classList.add("active");
+  class ResNav {
+    constructor (nav, button) {
+      this.nav = nav;
+      this.button = button;
+    }
+    responsive() {
+      this.button.onclick = () => {
+        if (this.nav.style.display === "") {
+          this.nav.style.display = "none";
+        }
+        if (this.nav.style.display === "none") {
+          this.nav.style.display = "block";
+          this.button.classList.add("arrow");
+        } else {
+          this.nav.style.display = "none";
+          this.button.classList.remove("arrow");
+        }
       };
-    });
-  };
+    }
+  }
 
-  // Toggle menu in small screens
-  const menu = document.getElementById("nav-links"),
-    toggleElements = document.getElementById("toggle-menu-elements"),
-    toggler = document.getElementById("toggler");
+  class Animations {
+    constructor (element) {
+      this.element = element;
+    }
+    showFromLeft() {
+      this.element.style.animation = "show 1s ease-out forwards";
+    }
+    fadeIn() {
+      if (this.element.constructor === HTMLElement) {
+        this.element.style.animation = "fade-in 1s linear forwards";
+      } else {
+        this.element.forEach((elem) => {
+          elem.style.animation = "fade-in 1s linear forwards";
+        });
+      }
+    }
+  }
   
-  toggler.onclick = function () {
-    if (menu.style.display === "") {
-      menu.style.display = "none";
-    }
-    if (menu.style.display === "none") {
-      menu.style.display = "block";
-      this.classList.add("arrow");
-    } else {
-      menu.style.display = "none";
-      this.classList.remove("arrow");
-    }
-  };
-
   // Active on Nav links
-  const navLinks = document.querySelectorAll(".nav-links .link");
-  linksActive(navLinks);
-
+  const navLinks = new ActiveLinks(document.querySelectorAll(".nav-links .link"));
+  navLinks.active();
+  
+  // Toggle menu in small screens
+  const menu = new ResNav(document.getElementById("nav-links"), document.getElementById("toggler"));
+  menu.responsive();
+  
   // About-us section animation
-  const aboutUs = document.getElementById("about-us");
-  show(aboutUs);
-
+  const aboutUs = new Animations(document.getElementById("about-us"));
+  aboutUs.showFromLeft();
+  
   // Features section animation
-  const featuresSection = document.getElementById("features"),
-        features = document.querySelectorAll(".feature");  
-  arrFadeIn(features);
+  const features = new Animations(document.querySelectorAll(".feature"));
+  features.fadeIn();
 
   // Gallery section animation
-  const gallery = document.getElementById("gallery");
-  fadeIn(gallery);
+  const gallery = new Animations(document.getElementById("gallery"));
+  gallery.fadeIn();
 
   // Testimonials section swiper
   const swiper = new Swiper(".swiper-container", {

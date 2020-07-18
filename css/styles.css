@@ -195,10 +195,6 @@ header nav .nav-links .link.active {
   color: var(--main-color);
 }
 
-header nav .nav-links .link a {
-  
-}
-
 header nav .nav-button a {
   padding: 10px 30px;
   border-radius: 25px;
@@ -208,9 +204,6 @@ header nav .nav-button a {
 }
 
 @media (max-width: 991px) {
-  header nav .toggle-menu {
-    
-  }
   header nav .nav-links {
     display: none;
     position: absolute;
@@ -221,9 +214,6 @@ header nav .nav-button a {
     border-radius: 5px;
     z-index: 1100;
     background-color: #ffffff;
-  }
-  header nav .nav-links .link {
-    
   }
   header nav .nav-links .link:not(:last-of-type) {
     border-bottom: 1px solid #efefef;
@@ -240,14 +230,8 @@ header nav .nav-button a {
 }
 
 @media (min-width: 992px) {
-  header nav .flex-wrapper {
-    
-  }
   header nav .toggle-menu {
     display: none;
-  }
-  header nav .logo {
-    
   }
   header nav .nav-links {
     display: flex !important;
@@ -271,9 +255,6 @@ header nav .nav-button a {
     padding: 0 20px;
     justify-content: center;
     align-items: center;
-  }
-  header nav .nav-button {
-    
   }
 }
 
@@ -345,6 +326,7 @@ main .about-us .content .info .title {
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 1px;
+  color: inherit;
 }
 
 main .about-us .content .info .title span {
