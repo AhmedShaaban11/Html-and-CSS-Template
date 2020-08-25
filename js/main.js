@@ -5,17 +5,46 @@ class Animations {
   constructor (element) {
     this.element = element;
   }
+  sectionPosition(e, animationName) {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > (e.offsetTop + e.offsetHeight - window.innerHeight)) {
+        e.style.animation = animationName;
+      }
+    });
+  }
   showFromLeft() {
-    this.element.style.animation = "show 1s ease-out forwards";
+    this.sectionPosition(this.element, "show 1s ease-out forwards");
   }
   fadeIn() {
     if (this.element.constructor === HTMLElement) {
-      this.element.style.animation = "fade-in 1s linear forwards";
+      this.sectionPosition(this.element, "fade-in 1s linear forwards");
     } else {
       this.element.forEach((elem) => {
-        elem.style.animation = "fade-in 1s linear forwards";
+        this.sectionPosition(elem, "fade-in 1s linear forwards");
       });
     }
+  }
+}
+
+class Counter {
+  constructor (elements) {
+    this.elements = elements;
+  }
+  counter() {
+    this.elements.forEach((elem) => {
+      let i = 0;
+      let limit = +(elem.getAttribute("data-num"));
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > (elem.offsetTop + elem.offsetHeight - window.innerHeight)) {
+          setInterval(() => {
+            if (i < limit) {
+              i++;
+              elem.textContent = i;
+            }
+          }, 100);
+        }
+      });
+    });    
   }
 }
 
@@ -133,6 +162,11 @@ gallery.arrowIcon = document.getElementById("arrow");
 gallery.toggleName = document.getElementById("toggle-name");
 gallery.fadeIn();
 gallery.show();
+
+// Progress section animation
+const progress = new Counter();
+progress.elements = document.querySelectorAll(".counter");
+progress.counter();
 
 // Testimonials section swiper
 const swiper = new Swiper(".swiper-container", {
