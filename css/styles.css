@@ -1,19 +1,4 @@
 /* Framework */
-
-/* color: #090029 blue */
-/* color: #021e4d blue */
-/* color: #3b328b purple */
-/* color: #040011 black */
-/* color: #17b373 green */
-/* color: #6eb32a green */
-/* color: #ffa502 orange */
-/* --gallery-overlay-color: rgba(23, 67, 100, .8) */
-
-/* Harmony colors */
-/* purple: #6c39b8 */
-/* main-color: #39b89e */
-/* color: #009572 green(one of the best) */
-
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -770,7 +755,6 @@ main .blog .post {
   width: 100%;
   height: 100%;
   border: 1px solid #e5e5e5;
-  cursor: pointer;
   box-shadow: 2px 2px 5px #e5e5e5;
 }
 main .blog .post .post-image {
