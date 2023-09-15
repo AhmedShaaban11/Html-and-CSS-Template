@@ -1,6 +1,8 @@
 # Template-3
 Html, CSS, and JS template
 
+[Live Action](https://ahmedshaaban11.github.io/Html-and-CSS-Template/)
+
 ## Key Features
 - Used Swiper.js, and FontAwesome
 - Responsive design on all devices
