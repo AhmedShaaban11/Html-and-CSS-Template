@@ -259,7 +259,6 @@ main > section {
 }
 /* About-us section */
 main .about-us {
-  right: 100vw;
   padding: 60px 0;
   background-color: #f7f7f7;
 }

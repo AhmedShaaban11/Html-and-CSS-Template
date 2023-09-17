@@ -12,9 +12,6 @@ class Animations {
       }
     });
   }
-  showFromLeft() {
-    this.sectionPosition(this.element, "show 1s ease-out forwards");
-  }
   fadeIn() {
     if (this.element.constructor === HTMLElement) {
       this.sectionPosition(this.element, "fade-in 1s linear forwards");
@@ -142,11 +139,6 @@ menu.links = document.getElementById("nav-links");
 menu.button = document.getElementById("toggler");
 menu.responsive();
 menu.fixed();
-
-// About-us section animation
-const aboutUs = new Animations();
-aboutUs.element = document.getElementById("about-us");
-aboutUs.showFromLeft();
 
 // Features section animation
 const features = new Animations();
