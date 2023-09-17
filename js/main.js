@@ -1,28 +1,3 @@
-"use strict";
-
-// Classes
-class Animations {
-  constructor (element) {
-    this.element = element;
-  }
-  sectionPosition(e, animationName) {
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > (e.offsetTop + e.offsetHeight - window.innerHeight)) {
-        e.style.animation = animationName;
-      }
-    });
-  }
-  fadeIn() {
-    if (this.element.constructor === HTMLElement) {
-      this.sectionPosition(this.element, "fade-in 1s linear forwards");
-    } else {
-      this.element.forEach((elem) => {
-        this.sectionPosition(elem, "fade-in 1s linear forwards");
-      });
-    }
-  }
-}
-
 class ResNav {
   constructor (nav, links, button, overlay) {
     this.nav = nav;
@@ -61,31 +36,6 @@ class ResNav {
   }
 }
 
-class Gallery extends Animations {
-  constructor (element, images, button, arrowIcon, toggleName) {
-    super(element);
-    this.images = images;
-    this.button = button;
-    this.arrowIcon = arrowIcon;
-    this.toggleName = toggleName;
-  }
-  show() {
-    this.button.onclick = () => {
-      this.images.forEach((img) => {
-        if (img.style.display === "none") {
-          img.style.display = "inline";
-          this.arrowIcon.classList.replace("fa-arrow-down", "fa-arrow-up");
-          this.toggleName.textContent = "Show Less";
-        } else {
-          img.style.display = "none";
-          this.arrowIcon.classList.replace("fa-arrow-up", "fa-arrow-down");
-          this.toggleName.textContent = "Show More";
-        }
-      });
-    };
-  }
-}
-
 // Active on Nav links
 const navLinks = document.querySelectorAll(".nav-links .link");
 navLinks.forEach((link) => {
@@ -106,13 +56,20 @@ menu.responsive();
 menu.fixed();
 
 // Gallery section animation
-const gallery = new Gallery();
-gallery.element = document.getElementById("gallery");
-gallery.images = document.querySelectorAll(".photo-hidden-sm");
-gallery.button = document.getElementById("toggle-button");
-gallery.arrowIcon = document.getElementById("arrow");
-gallery.toggleName = document.getElementById("toggle-name");
-gallery.show();
+const gallery = {};
+const galleryImages = document.querySelectorAll(".photo-hidden-sm");
+const galleryToggleButton = document.getElementById("toggle-button");
+galleryToggleButton.addEventListener("click", () => {
+  galleryImages.forEach((img) => {
+    if (!img.style.display || img.style.display === "none") {
+      img.style.display = "inline";
+      galleryToggleButton.querySelector("i").classList.replace("fa-arrow-down", "fa-arrow-up");
+    } else {
+      img.style.display = "none";
+      galleryToggleButton.querySelector("i").classList.replace("fa-arrow-up", "fa-arrow-down");
+    }
+  });
+});
 
 // Testimonials section swiper
 const swiper = new Swiper(".swiper-container", {
