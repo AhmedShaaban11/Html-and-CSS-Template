@@ -110,9 +110,6 @@ class Gallery extends Animations {
   show() {
     this.button.onclick = () => {
       this.images.forEach((img) => {
-        if (img.style.display === "") {
-          img.style.display = "none";
-        }
         if (img.style.display === "none") {
           img.style.display = "inline";
           this.arrowIcon.classList.replace("fa-arrow-down", "fa-arrow-up");
@@ -147,7 +144,6 @@ gallery.images = document.querySelectorAll(".photo-hidden-sm");
 gallery.button = document.getElementById("toggle-button");
 gallery.arrowIcon = document.getElementById("arrow");
 gallery.toggleName = document.getElementById("toggle-name");
-gallery.fadeIn();
 gallery.show();
 
 // Progress section animation

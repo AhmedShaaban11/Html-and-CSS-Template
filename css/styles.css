@@ -366,7 +366,6 @@ main .features .feature .feature-title::after {
 /* Gallery section */
 main .gallery {
   padding: 60px 0;
-  opacity: 0;
   background-color: #f7f7f7;
 }
 main .gallery .title {
