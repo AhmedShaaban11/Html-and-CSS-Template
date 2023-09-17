@@ -330,7 +330,6 @@ main .features .grid-wrapper {
   grid-gap: 40px 20px;
 }
 main .features .feature {
-  opacity: 0;
   text-align: center;
 }
 main .features .feature .feature-icon {

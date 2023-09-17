@@ -140,11 +140,6 @@ menu.button = document.getElementById("toggler");
 menu.responsive();
 menu.fixed();
 
-// Features section animation
-const features = new Animations();
-features.element = document.querySelectorAll(".feature");
-features.fadeIn();
-
 // Gallery section animation
 const gallery = new Gallery();
 gallery.element = document.getElementById("gallery");
