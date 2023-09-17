@@ -498,7 +498,8 @@ main .gallery .toggle-photos button {
   height: 40px;
   border: 1px solid #dddddd;
   border-radius: 50%;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
   cursor: pointer;
   color: var(--main-color);
   background-color: #ffffff;

@@ -52,12 +52,11 @@ galleryToggleButton.addEventListener("click", () => {
   galleryImages.forEach((img) => {
     if (!img.style.display || img.style.display === "none") {
       img.style.display = "inline";
-      galleryToggleButton.querySelector("i").classList.replace("fa-arrow-down", "fa-arrow-up");
     } else {
       img.style.display = "none";
-      galleryToggleButton.querySelector("i").classList.replace("fa-arrow-up", "fa-arrow-down");
     }
   });
+  galleryToggleButton.textContent = galleryToggleButton.textContent === "↓" ? "↑" : "↓";
 });
 
 // Testimonials section swiper
