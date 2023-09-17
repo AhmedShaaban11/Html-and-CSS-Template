@@ -19,13 +19,13 @@
     <nav id="header-nav">
       <div class="container">
         <div class="flex-wrapper">
-          <div class="toggle-menu">
+          <button class="toggle-menu">
             <i class="icon fa fa-align-justify" id="toggler"></i>
-          </div>
+          </button>
           <div class="logo">
             <h1 class="title">Zotemo</h1>
           </div>
-          <ul class="nav-links list-unstyled" id="nav-links">
+          <ul class="nav-list list-unstyled" id="nav-list">
             <li class="link active"><a href="#header">Home</a></li>
             <li class="link"><a href="#about-us">About</a></li>
             <li class="link"><a href="#gallery">Gallery</a></li>
@@ -157,29 +157,28 @@
           </figure>
         </div>
         <div class="toggle-photos">
-          <button type="button" id="toggle-button"><i class="fa fa-arrow-down" id="arrow"></i></button>
-          <p id="toggle-name">Show More</p>
+          <button type="button" id="toggle-button">↓</button>
         </div>
       </div>
     </section>
-    <!-- Progress section -->
-    <section class="progress" id="progress">
+    <!-- stats section -->
+    <section class="stats" id="stats">
       <div class="container">
         <div class="grid-wrapper">
-          <div class="progress-counter">
-            <h4 class="counter" data-num="37">0</h4>
+          <div class="stats-counter">
+            <h4 class="counter">7</h4>
             <h3 class="counter-title">Country</h3>
           </div>
-          <div class="progress-counter">
-            <h4 class="counter" data-num="120">0</h4>
+          <div class="stats-counter">
+            <h4 class="counter">120</h4>
             <h3 class="counter-title">Volunteer</h3>
           </div>
-          <div class="progress-counter">
-            <h4 class="counter" data-num="2421">0</h4>
+          <div class="stats-counter">
+            <h4 class="counter">2421</h4>
             <h3 class="counter-title">Visitor</h3>
           </div>
-          <div class="progress-counter">
-            <h4 class="counter" data-num="756">0</h4>
+          <div class="stats-counter">
+            <h4 class="counter">756</h4>
             <h3 class="counter-title">Animal</h3>
           </div>
         </div>
@@ -196,13 +195,13 @@
                   <img src="images/11.jpg" alt="">
                 </div>
                 <h3 class="person-name">John Doe</h3>
-                <div class="rank">
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </div>
+                <ul class="rank">
+                  <li class="star" data-order="1"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="2"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="3"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="4"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="5"><i class="fa fa-star"></i></li>
+                </ul>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Felis donec et odio pellentesque diam Feugiat pretium nibh ipsum consequat nisl</p>
               </div>
             </div>
@@ -212,13 +211,13 @@
                   <img src="images/12.jpg" alt="">
                 </div>
                 <h3 class="person-name">John Doe</h3>
-                <div class="rank">
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </div>
+                <ul class="rank">
+                  <li class="star" data-order="1"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="2"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="3"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="4"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="5"><i class="fa fa-star"></i></li>
+                </ul>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Felis donec et odio pellentesque diam Feugiat pretium nibh ipsum consequat nisl</p>
               </div>
             </div>
@@ -228,21 +227,21 @@
                   <img src="images/13.jpg" alt="">
                 </div>
                 <h3 class="person-name">John Doe</h3>
-                <div class="rank">
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                  <a href="#"><i class="fa fa-star"></i></a>
-                </div>
+                <ul class="rank">
+                  <li class="star" data-order="1"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="2"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="3"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="4"><i class="fa fa-star"></i></li>
+                  <li class="star" data-order="5"><i class="fa fa-star"></i></li>
+                </ul>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Felis donec et odio pellentesque diam Feugiat pretium nibh ipsum consequat nisl</p>
               </div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev swiper-button"></div>
-          <div class="swiper-button-next swiper-button"></div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button"></div>
+        <div class="swiper-button-next swiper-button"></div>
       </div>
     </section>
     <!-- Founders section -->
