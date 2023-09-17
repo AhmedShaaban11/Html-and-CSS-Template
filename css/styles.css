@@ -81,6 +81,7 @@ body {
   width: 100%;
   padding: 0 15px;
   margin: auto;
+  position: relative;
 }
 
 .responsive-grid {
@@ -607,22 +608,26 @@ main .testimonials {
 }
 
 main .testimonials .swiper-container {
-  width: 100%;
   min-height: 300px;
 }
 
-main .testimonials .swiper-container .swiper-button {
-  margin-top: 0;
+main .testimonials .swiper-button {
   color: var(--main-color);
+  padding: 50px;
 }
 
-main .testimonials .swiper-container .swiper-pagination .swiper-pagination-bullet {
-  width: 40px;
-  height: 7px;
-  border-radius: 0;
+main .testimonials .swiper-pagination {
+  width: 98%;
 }
 
-main .testimonials .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+main .testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 4px;
+}
+
+main .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--main-color);
 }
 
@@ -649,13 +654,16 @@ main .testimonials .testimonial .person-img img {
 }
 
 main .testimonials .testimonial .rank {
-  cursor: default;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-main .testimonials .testimonial .rank a {
+main .testimonials .testimonial .rank .star {
   font-size: 14px;
   color: #ffcf2f;
   text-decoration: none;
+  display: inline-block;
 }
 
 main .testimonials .testimonial .person-name {
@@ -666,11 +674,10 @@ main .testimonials .testimonial .person-name {
 
 main .testimonials .testimonial p {
   margin-top: 0;
-  margin-bottom: 40px;
 }
 
 @media (max-width: 767px) {
-  main .testimonials .swiper-container .swiper-button {
+  main .testimonials .swiper-button {
     display: none;
   }
 }
