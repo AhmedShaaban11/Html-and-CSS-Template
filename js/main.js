@@ -45,22 +45,6 @@ class Counter {
   }
 }
 
-class ActiveLinks {
-  constructor (elements) {
-    this.elements = elements;
-  }
-  active() {
-    this.elements.forEach((elem) => {
-      elem.onclick = () => {
-        this.elements.forEach((e) => {
-          e.classList.remove("active");
-        });
-        elem.classList.add("active");
-      };
-    });
-  }
-}
-
 class ResNav {
   constructor (nav, links, button, overlay) {
     this.nav = nav;
@@ -125,9 +109,15 @@ class Gallery extends Animations {
 }
 
 // Active on Nav links
-const navLinks = new ActiveLinks();
-navLinks.elements = document.querySelectorAll(".nav-links .link");
-navLinks.active();
+const navLinks = document.querySelectorAll(".nav-links .link");
+navLinks.forEach((link) => {
+  link.onclick = () => {
+    navLinks.forEach((l) => {
+      l.classList.remove("active");
+    });
+    link.classList.add("active");
+  };
+});
 
 // Toggle menu in small screens
 const menu = new ResNav();
