@@ -475,13 +475,13 @@ main .gallery .toggle-photos p {
     display: none;
   }
 }
-/* Progress section */
-main .progress {
+/* stats section */
+main .stats {
   padding: 60px 0;
   background: url(../images/10.jpg) no-repeat;
   background-size: cover;
 }
-main .progress .grid-wrapper {
+main .stats .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 100px);
@@ -491,25 +491,25 @@ main .progress .grid-wrapper {
   color: #ffffff;
   text-align: center;
 }
-main .progress .progress-counter .counter {
+main .stats .stats-counter .counter {
   margin: 0;
   font-weight: bold;
   font-size: 1.4rem;
   letter-spacing: 1px;
 }
-main .progress .progress-counter .counter-title {
+main .stats .stats-counter .counter-title {
   margin: 0;
   font-size: 1.5rem;
   letter-spacing: 1px;
 }
 @media (min-width: 786px) {
-  main .progress .grid-wrapper {
+  main .stats .grid-wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 100px);
   }
 }
 @media (min-width: 992px) {
-  main .progress .grid-wrapper {
+  main .stats .grid-wrapper {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 100px;
   }
