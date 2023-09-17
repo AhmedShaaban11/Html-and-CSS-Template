@@ -1,61 +1,50 @@
-class ResNav {
-  constructor (nav, links, button, overlay) {
-    this.nav = nav;
-    this.links = links;
-    this.button = button;
-    this.overlay = document.getElementById("body-overlay");
-  }
-  responsive() {
-    this.button.onclick = () => {
-      if (this.links.style.display === "") {
-        this.links.style.display = "none";
-      }
-      if (this.links.style.display === "none") {
-        this.nav.classList.add("fixed");
-        this.links.style.display = "block";
-        this.overlay.style.display = "block";
-      } else {
-        this.links.style.display = "none";
-        this.overlay.style.display = "none";
-        this.position();
-      }
-    };
-  }
-  position() {
-    if (window.pageYOffset < 200 && this.links.style.display === "block") {
-      this.nav.classList.add("fixed");
-    } else if (window.pageYOffset > 200) {
-      this.nav.classList.add("fixed");
-    } else {
-      this.nav.classList.remove("fixed");
-    }
-  }
-  fixed() {
-    window.addEventListener("load", () => this.position());
-    window.addEventListener("scroll", () => this.position());
+// Nav functionalities
+const nav = document.getElementById("header-nav");
+const navList = document.getElementById("nav-list");
+const menuToggler = document.getElementById("toggler");
+const bodyOverlay = document.getElementById("body-overlay");
+
+// Fixed nav on scroll
+function fixedPosition() {
+  if (window.pageYOffset > 100 || navList.style.display === "block") {
+    nav.classList.add("fixed");
+  } else {
+    nav.classList.remove("fixed");
   }
 }
 
-// Active on Nav links
-const navLinks = document.querySelectorAll(".nav-links .link");
+addEventListener("load", fixedPosition);
+addEventListener("scroll", fixedPosition);
+
+// Menu toggler on sm screens
+menuToggler.addEventListener("click", () => {
+  if (!navList.style.display || navList.style.display === "none") {
+    nav.classList.add("fixed");
+    navList.style.display = "block";
+    bodyOverlay.style.display = "block";
+  } else {
+    navList.style.display = "none";
+    bodyOverlay.style.display = "none";
+    fixedPosition();
+  }
+});
+
+bodyOverlay.addEventListener("click", () => {
+  menuToggler.click();
+});
+
+// Active toggling between nav links
+const navLinks = document.querySelectorAll(".nav-list .link");
 navLinks.forEach((link) => {
   link.onclick = () => {
-    navLinks.forEach((l) => {
-      l.classList.remove("active");
+    navLinks.forEach((li) => {
+      li.classList.remove("active");
     });
     link.classList.add("active");
   };
 });
 
-// Toggle menu in small screens
-const menu = new ResNav();
-menu.nav = document.getElementById("header-nav");
-menu.links = document.getElementById("nav-links");
-menu.button = document.getElementById("toggler");
-menu.responsive();
-menu.fixed();
-
-// Gallery section animation
+// Gallery show more button on sm screens
 const gallery = {};
 const galleryImages = document.querySelectorAll(".photo-hidden-sm");
 const galleryToggleButton = document.getElementById("toggle-button");

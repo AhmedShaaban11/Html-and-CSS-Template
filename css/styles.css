@@ -171,6 +171,8 @@ header nav .flex-wrapper {
 }
 
 header nav .toggle-menu {
+  background: none;
+  border: none;
   position: relative;
   font-size: 1.6rem;
   cursor: pointer;
@@ -182,20 +184,20 @@ header nav .logo {
   color: var(--main-color);
 }
 
-header nav .nav-links {
+header nav .nav-list {
   font-size: 1.2rem;
   text-transform: capitalize;
 }
 
-header nav .nav-links .link {
+header nav .nav-list .link {
   transition: all .1s linear;
 }
 
-header nav .nav-links .link:hover {
+header nav .nav-list .link:hover {
   color: var(--main-color);
 }
 
-header nav .nav-links .link.active {
+header nav .nav-list .link.active {
   color: var(--main-color);
 }
 
@@ -208,7 +210,7 @@ header nav .nav-button a {
 }
 
 @media (max-width: 991px) {
-  header nav .nav-links {
+  header nav .nav-list {
     display: none;
     position: fixed;
     top: var(--nav-height);
@@ -220,10 +222,10 @@ header nav .nav-button a {
     z-index: 1100;
     background-color: #ffffff;
   }
-  header nav .nav-links .link:not(:last-of-type) {
+  header nav .nav-list .link:not(:last-of-type) {
     border-bottom: 1px solid #efefef;
   }
-  header nav .nav-links .link a {
+  header nav .nav-list .link a {
     display: block;
     width: 100%;
     height: 100%;
@@ -238,22 +240,22 @@ header nav .nav-button a {
   header nav .toggle-menu {
     display: none;
   }
-  header nav .nav-links {
+  header nav .nav-list {
     display: flex !important;
     height: 100%;
   }
-  header nav .nav-links .link {
+  header nav .nav-list .link {
     display: flex;
     width: 100%;
     height: 100%;
   }
-  header nav .nav-links .link:hover {
+  header nav .nav-list .link:hover {
     border-bottom: 3px solid var(--main-color);
   }
-  header nav .nav-links .link.active {
+  header nav .nav-list .link.active {
     border-bottom: 3px solid var(--main-color);
   }
-  header nav .nav-links .link a {
+  header nav .nav-list .link a {
     display: flex;
     width: 100%;
     height: var(--nav-height);
